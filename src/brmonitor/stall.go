@@ -9,10 +9,10 @@ import(
 
 
 type Stall struct {
-  Id int `json:"id"`
-  Status bool `json:"status"`
-  LastOpened int64 `json:"last_closed"`
-  LastClosed int64 `json:"last_opened"`
+  Id         int   `json:"id"`
+  Status     bool  `json:"status"`
+  LastOpened int64 `json:"last_opened"`
+  LastClosed int64 `json:"last_closed"`
 }
 
 func (theStall Stall) GetStatus() (bool) {
@@ -34,15 +34,16 @@ func (theStall *Stall) SetStatus(status bool) {
     }
     *oldStatus = status
   }
-
 }
 
 func (theStall Stall) GetLastOpened() (string) {
   return time.Unix(theStall.LastOpened, 0).Format(time.RFC1123)
 }
+
 func (theStall Stall) GetLastClosed() (string) { 
   return time.Unix(theStall.LastClosed, 0).Format(time.RFC1123)
 }
+
 func (theStall *Stall) ToJSON() (string) {
   data, err := json.Marshal(theStall)
 
