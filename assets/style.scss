@@ -22,18 +22,6 @@ body {
 	}
 }
 
-@mixin prefixer($attribute, $value) {
-	$prefixes = webkit moz o ms
-	$postfix = #{$attribute}: $value
-	@each $prefix in $prefixes 
-		-#{$prefix}-#{$postfix}
-	end
-	$postfix
-}
--webkit-transform: translateY(-50%);
--webkit-transform: translateY(-50%);
--webkit-transform: translateY(-50%);
-
 $close-color: rgba(151, 47, 44, 1.0);
 $open-color:  rgba(111, 171, 75, 1.0);
 $darken-amt:  7;
