@@ -23,7 +23,7 @@ func main() {
   http.HandleFunc("/stalls",  datBathroom.HandleStalls)
 
   fmt.Println("Starting Server...")
-  http.ListenAndServe(":80", nil)
+  http.ListenAndServe(":3000", nil)
 }
 
 type ServerContext struct {

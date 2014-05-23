@@ -9,12 +9,15 @@ body {
   margin: 10% auto;
   width: 80%;
   max-width: 300px;
+  display: -webkit-flex;
   display: inline-flex;
   flex-direction: row; }
 
 .stall {
   background-color: #972f2c;
   border: 1px solid #7b2624;
+  -webkit-flex: 1;
+  -moz-flex: 1;
   flex: 1; }
   .stall.open {
     background-color: #6fab4b;

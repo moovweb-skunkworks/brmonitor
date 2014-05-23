@@ -14,7 +14,9 @@ Bathroom.prototype.getStalls = function() {
 
 	stallsRequest.addEventListener("load", function() {
 		var bathroomResponse = JSON.parse(this.responseText);
-		if(bathroomResponse.stalls !== bathroom.stalls) {
+    console.log(bathroomResponse.stalls);
+    console.log(bathroom.stalls);
+		if(bathroomResponse.stalls != bathroom.stalls) {
 			bathroom.stalls = bathroomResponse.stalls;
 			bathroom.render();
 		}
@@ -59,7 +61,7 @@ Bathroom.prototype.render = function() {
 document.addEventListener("DOMContentLoaded", function() {
 	window.bathroom = new Bathroom();
 	window.setInterval(function() {
-		window.bathroom.getStalls();
+		// window.bathroom.getStalls();
 	},
 	2000);
 	console.log(bathroom.getStalls());

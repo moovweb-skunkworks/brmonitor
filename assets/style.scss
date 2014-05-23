@@ -15,7 +15,8 @@ body {
 	margin: 10% auto;
 	width: 80%;
 	max-width: 300px;
-	display: inline-flex;
+  display: -webkit-flex;
+  display: inline-flex;
 	flex: {
 		direction: row;
 	}
@@ -29,7 +30,9 @@ $darken-amt:  7;
 		color: $close-color;
 	}
 	border: 1px solid darken($close-color, $darken-amt);
-	flex: 1;
+  -webkit-flex: 1;
+     -moz-flex: 1;
+	        flex: 1;
 
 	&.open {
 		background: {
@@ -49,10 +52,10 @@ $darken-amt:  7;
 			position: absolute;
 			left: 0px;
 			bottom: 0px;
-			-webkit-transform: rotate(15deg);
+			-webkit-transform:        rotate(15deg);
 			-webkit-transform-origin: 0;
-			-moz-transform:    rotate(15deg);
-			-moz-transform-origin: 0;
+			   -moz-transform:        rotate(15deg);
+			   -moz-transform-origin: 0;
 		}
 	}
 
