@@ -1,3 +1,38 @@
 body {
-  background-color: black;
-}
+  font-size: 32px;
+  font-family: sans-serif; }
+
+.status-display {
+  text-align: center; }
+
+.bathroom {
+  margin: 10% auto;
+  width: 80%;
+  max-width: 300px;
+  display: inline-flex;
+  flex-direction: row; }
+
+.stall {
+  background-color: #972f2c;
+  border: 1px solid #7b2624;
+  flex: 1; }
+  .stall.open {
+    background-color: #6fab4b;
+    border: 1px solid #5f9240;
+    border-bottom: 0px;
+    position: relative; }
+    .stall.open:after {
+      display: block;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #5f9240;
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      -webkit-transform: rotate(15deg);
+      -webkit-transform-origin: 0;
+      -moz-transform: rotate(15deg);
+      -moz-transform-origin: 0; }
+  .stall.big {
+    margin-bottom: -40px; }

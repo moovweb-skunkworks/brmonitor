@@ -1,0 +1,63 @@
+body {
+	font: {
+		size:   32px;
+		family: sans-serif;
+	}
+}
+
+.status-display {
+	text: {
+		align: center;
+	}
+}
+
+.bathroom {
+	margin: 10% auto;
+	width: 80%;
+	max-width: 300px;
+	display: inline-flex;
+	flex: {
+		direction: row;
+	}
+}
+
+$close-color: rgba(151, 47, 44, 1.0);
+$open-color:  rgba(111, 171, 75, 1.0);
+$darken-amt:  7;
+.stall {
+	background: {
+		color: $close-color;
+	}
+	border: 1px solid darken($close-color, $darken-amt);
+	flex: 1;
+
+	&.open {
+		background: {
+			color: $open-color;
+		}
+		border: 1px solid darken($open-color, $darken-amt);
+		border: {
+			bottom: 0px;
+		}
+		position: relative;
+		&:after {
+			display: block;
+			content: "";
+			width: 100%;
+			height: 1px;
+			background-color: darken($open-color, $darken-amt);
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+			-webkit-transform: rotate(15deg);
+			-webkit-transform-origin: 0;
+			-moz-transform:    rotate(15deg);
+			-moz-transform-origin: 0;
+		}
+	}
+
+	&.big {
+		margin-bottom: -40px;
+	}
+}
+
