@@ -61,7 +61,7 @@ Bathroom.prototype.render = function() {
 document.addEventListener("DOMContentLoaded", function() {
   window.bathroom = new Bathroom();
   window.setInterval(function() {
-    // window.bathroom.getStalls();
+    window.bathroom.getStalls();
   },
   2000);
   console.log(bathroom.getStalls());
